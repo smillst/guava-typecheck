@@ -12,6 +12,7 @@ set -e
 echo "Should next trigger downstream jobs."
 true
 
+(cd $ROOT && hg clone ssh://hg@bitbucket.org/typetools/jsr308-langtools)
 ## Build Checker Framework
 (cd $ROOT && git clone --depth 1 https://github.com/typetools/checker-framework.git)
 # This also builds annotation-tools and jsr308-langtools
